@@ -3,14 +3,17 @@ let campoNombre = document.getElementById("Name");
 let campoCantidad = document.getElementById("Number");
 let i = 1;
 let flag = true;
+let resumen = 0;
 
 
 
 btnAgregar.addEventListener("click", function(event){
 event.preventDefault;
 
+let campoResumen = document.getElementById("resumen");
 let inputNombre = document.getElementById("Name").value;
-let inputCant = document.getElementById("Number").value;
+let inputCant = parseFloat(document.getElementById("Number").value);
+let total = 0;
 
 if (inputNombre == "" || !isNaN(inputNombre) ) {
     flag= false;
@@ -47,7 +50,7 @@ if (flag){
     li1.className = ("list-group-item");
     
     let li2 = document.createElement("li");
-    li2.innerText = (parseInt(inputCant));
+    li2.innerText = (inputCant);
     li2.className = ("list-group-item");
     
     ul[i].after(ulShop);
@@ -55,6 +58,10 @@ if (flag){
     ulShop.append(li1);
     ulShop.append(li2);
     i += 1;
+
+    resumen += inputCant;
+    campoResumen.innerText = resumen;
+
 }
 
 
