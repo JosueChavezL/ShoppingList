@@ -57,11 +57,10 @@
             <h6 class="my-0">Total en Productos</h6>
             <small class="text-muted">Total </small>
           </div>
-          <span class="text-muted">$0</span>
-        </li>
-        
+          <span id="campoTotal" class="text-muted">$0</span>
+        </li>        
       </ul>
-
+      <button id="btnBorrar" class="btn btn-danger btn-block" type="button">Borrar Lista</button>
       
     </div>
     <div class="col-md-8 order-md-1">
@@ -85,15 +84,14 @@
         </div>
         <button id="btnAgregar" class="btn btn-primary btn-lg btn-block" type="button">Agregar</button>
         <hr class="mb-4">
-        
-  
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item font-weight-bold">#</li>
-          <li class="list-group-item font-weight-bold">Nombre</li>
-          <li class="list-group-item font-weight-bold">Cantidad</li>
-        </ul>
-      
-
+      <!-- Aquí se van insertando todas las tablas -->
+            <ul class="list-group list-group-horizontal">
+              <li style="width: 20%" class="list-group-item font-weight-bold text-center">#</li>
+              <li style="width: 40%" class="list-group-item font-weight-bold text-center">Nombre</li>
+              <li style="width: 20%" class="list-group-item font-weight-bold text-center">Cantidad</li>
+              <li style="width: 20%" class="list-group-item font-weight-bold text-center">Precio</li>
+            </ul>          
+       
       </form>
     </div>
   </div>
